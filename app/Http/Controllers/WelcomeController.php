@@ -22,7 +22,7 @@ class WelcomeController extends Controller
         $numberOfPrizes = $request->jumlah;
 
         // Simulasi penundaan 5 detik untuk memperoleh pemenang
-        sleep(5);
+        // sleep(5);
 
         $dooprizes = [];
         $count = Recipient::count();

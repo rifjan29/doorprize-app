@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     /* background: #000 !important; */
-    height: fit-content;
+    height: 100vh;
     overflow: hidden;
 }
 .pyro > .before, .pyro > .after {
