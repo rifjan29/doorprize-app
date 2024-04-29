@@ -91,8 +91,8 @@ class WelcomeController extends Controller
             $penerima->departemen = $recipient->departemen;
             $penerima->bagian = $recipient->bagian;
             $penerima->save();
-            // $deletDooprize = Dooprize::where('name',$prize)->first()->delete();
-            // $deletePenerima = Recipient::find($recipient->id)->delete();
+            $deletDooprize = Dooprize::where('name',$prize)->first()->delete();
+            $deletePenerima = Recipient::find($recipient->id)->delete();
             Session::put('prize', $prize);
             Session::put('recipient', $recipient->name);
             Session::put('nak', $recipient->nak);
