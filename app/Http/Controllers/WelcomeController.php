@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dooprize;
+use App\Models\Penerima;
 use App\Models\Recipient;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class WelcomeController extends Controller
 {
@@ -35,9 +37,20 @@ class WelcomeController extends Controller
         // Generate random prizes for each recipient
         foreach ($recipients as $recipient) {
             $prize = $this->generateRandomPrize();
+            $findDooprize = Dooprize::where('name',$prize)->first();
+            $penerima = new Penerima;
+            $penerima->id_penerima = $recipient->id;
+            $penerima->id_hadiah = $findDooprize->id;
+            $penerima->nama_penerima = $recipient->name;
+            $penerima->nama_hadiah = $prize;
+            $penerima->save();
+            $deletDooprize = Dooprize::where('name',$prize)->first()->delete();
+            $deletePenerima = Recipient::find($recipient->id)->delete();
+            Session::put('prize', $prize);
+            Session::put('recipient', $recipient->name);
             $dooprizes[] = [
-                'recipient' => $recipient->name,
-                'prize' => $prize
+                'recipient' => Session::get('recipient'),
+                'prize' => Session::get('prize'),
             ];
         }
 
@@ -53,8 +66,12 @@ class WelcomeController extends Controller
     {
         // Example of possible prizes, modify as needed
         $prizes = Dooprize::latest()->pluck('name')->toArray();
-
         return $prizes[array_rand($prizes)];
+    }
+
+    public function export() {
+        $penerima = Penerima::latest()->get();
+        return view('export',compact('penerima'));
     }
 
 }
