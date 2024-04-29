@@ -15,8 +15,8 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
+    <body class="font-sans h-fit">
+        <div class="h-fit bg-gray-100">
             @include('sweetalert::alert')
             @include('layouts.navigation')
             @include('layouts.sidebar')

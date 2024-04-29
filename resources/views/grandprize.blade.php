@@ -86,7 +86,7 @@
                     </div>
                 </section>
 
-                <section class="bg-gray-300 dark:bg-gray-900 max-w-4xl border-4 mx-auto mt-48 mb-5 border-gray-800 hidden" id="list-pemenang">
+                <section class="bg-gray-300 dark:bg-gray-900 max-w-4xl border-4 mx-auto mt-48 mb-5 border-gray-800 hidden overflow-y-auto h-screen" id="list-pemenang">
                     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-12 space-y-6">
                         <div class="flex justify-between">
                             <h4 class="font-bold">List Pemenang : </h4>
@@ -100,7 +100,7 @@
                             </div>
 
                         </div>
-                        <div class="relative overflow-x-auto overflow-y-auto">
+                        <div class="relative overflow-y-auto h-screen">
                             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 border-2 border-gray-800">
                                 <thead class="text-xs text-gray-700 uppercase bg-gray-300 dark:bg-gray-900 bg-opacity-50  dark:text-gray-400">
                                     <tr class="border-2 border-gray-800">
