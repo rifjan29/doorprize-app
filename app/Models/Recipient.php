@@ -11,5 +11,9 @@ class Recipient extends Model
     protected $table = 'recipient';
     protected $fillable = [
         'name',
+        'nak',
+        'nik',
+        'departemen',
+        'bagian',
     ];
 }

@@ -20,7 +20,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 Route::post('/pick-winners', [WelcomeController::class, 'generateDooprizes'])->name('pick.winners');
+// grandpize
+Route::get('grandprize', [WelcomeController::class, 'grandprize'])->name('grandprize');
+Route::post('/pick-grandprize', [WelcomeController::class, 'generateGrandPrize'])->name('pick.grandprize');
+// export
 Route::get('/export', [WelcomeController::class, 'export'])->name('export');
+// export grandprize
+Route::get('/export-grandprize', [WelcomeController::class, 'exportGrandprize'])->name('export.grandprize');
 Route::middleware(['auth'])->group(function () {
     Route::prefix('dashboard')->group(function () {
         // dooprize

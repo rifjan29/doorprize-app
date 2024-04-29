@@ -59,7 +59,7 @@ class DoopriseController extends Controller
         try {
             $tambah = new Dooprize;
             $tambah->name = $request->get('name');
-
+            $tambah->status = $request->get('status');
             $tambah->save();
 
             alert()->success('Sukses','Berhasil menambahkan data.');

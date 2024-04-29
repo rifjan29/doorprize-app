@@ -56,6 +56,7 @@
                 <table class="table table-bordered" id="example">
                     <thead>
                         <tr>
+                            <th>No</th>
                             <th scope="col" class="px-6 py-3 border-2 border-gray-800">
                                 NAK
                             </th>
@@ -86,7 +87,7 @@
                                 <td>{{ $item->nama_penerima }}</td>
                                 <td>{{ $item->departemen }}</td>
                                 <td>{{ $item->bagian }}</td>
-                                <td>{{ $item->nama_hadiah }}</td>
+                                <td>{{ $item->hadiah_pemenang }}</td>
 
                                 <td>
                                     {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('d F Y ') }}

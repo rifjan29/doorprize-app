@@ -57,6 +57,10 @@ class PenggunaController extends Controller
         try {
             $tambah = new Recipient;
             $tambah->name = $request->get('name');
+            $tambah->nak = $request->get('nak');
+            $tambah->nik = $request->get('nik');
+            $tambah->departemen = $request->get('departemen');
+            $tambah->bagian = $request->get('bagian');
 
             $tambah->save();
 

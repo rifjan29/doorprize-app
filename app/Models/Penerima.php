@@ -14,6 +14,10 @@ class Penerima extends Model
         'id_hadiah',
         'nama_penerima',
         'nama_hadiah',
+        'nak',
+        'nik',
+        'departemen',
+        'bagian',
     ];
 
 
