@@ -57,6 +57,9 @@
                     <thead>
                         <tr>
                             <th scope="col" class="px-6 py-3 border-2 border-gray-800">
+                                No
+                            </th>
+                            <th scope="col" class="px-6 py-3 border-2 border-gray-800">
                                 NAK
                             </th>
                             <th scope="col" class="px-6 py-3 border-2 border-gray-800">

@@ -246,7 +246,7 @@
                             </div>
 
                         </div>
-                        <div class="relative overflow-x-auto">
+                        <div class="relative overflow-x-auto overflow-y-auto">
                             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 border-2 border-gray-800">
                                 <thead class="text-xs text-gray-700 uppercase bg-gray-300 dark:bg-gray-900 bg-opacity-50  dark:text-gray-400">
                                     <tr class="border-2 border-gray-800">
