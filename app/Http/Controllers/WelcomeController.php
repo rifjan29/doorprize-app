@@ -127,8 +127,15 @@ class WelcomeController extends Controller
     private function generateRandomGrandPrize()
     {
         // Example of possible prizes, modify as needed
-        $prizes = Dooprize::where('status','grandprize')->latest()->pluck('name')->toArray();
-        return $prizes[array_rand($prizes)];
+        $prizes = Dooprize::where('status', 'grandprize')->latest()->pluck('name')->toArray();
+        $selectedPrize = array_rand($prizes); // Pilih hadiah secara acak
+
+        // Hapus hadiah yang sudah dipilih dari daftar
+        unset($prizes[$selectedPrize]);
+
+        // Kembalikan hadiah yang dipilih
+        return $selectedPrize;
+
     }
 
     public function export() {
